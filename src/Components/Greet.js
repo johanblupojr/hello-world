@@ -10,6 +10,13 @@ import React from 'react'
 // export const Greet = () => <h1> Hello Johan! </h1>
 
 
-const Greet = () => <h1> Hello Johan! </h1> 
-
-export default Greet;
+const Greet = (props) => {
+    console.log(props)
+    return (
+        <>
+    <h1> Hello {props.name} a.k.a. {props.heroName} </h1>
+        {props.children}
+        </>
+        )
+}
+export default Greet; 
